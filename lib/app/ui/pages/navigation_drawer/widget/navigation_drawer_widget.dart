@@ -1,15 +1,9 @@
-import 'package:app_comunic/app/my_app.dart';
-import 'package:app_comunic/app/ui/pages/camra/camera.dart';
+import 'package:app_comunic/app/services/gmaps/gmap_view.dart';
 import 'package:app_comunic/app/ui/pages/gestionar_ubicacion/add_geolocalizacion.dart';
-import 'package:app_comunic/app/ui/pages/gestionar_ubicacion/list_geolocalizacion.dart';
 import 'package:app_comunic/app/ui/pages/gestionar_ubicacion/loc/loc.dart';
 import 'package:app_comunic/app/ui/pages/home/tabs/profile/profile_tabs.dart';
-import 'package:app_comunic/app/ui/pages/list/insert_screen.dart';
 import 'package:app_comunic/app/ui/pages/list/list_averia/search_screen.dart';
-import 'package:app_comunic/app/ui/pages/list/list_averias.dart';
-import 'package:app_comunic/app/ui/pages/register/register_pages.dart';
 import 'package:app_comunic/app/ui/pages/register_averia/register_averia_page.dart';
-import 'package:app_comunic/app/ui/pages/register_telefono/register_telefono_page.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -217,7 +211,7 @@ class NavigationDrawerWidget extends StatelessWidget {
         break;
       case 5:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => MapList(),
+          builder: (context) => const MapView(),
         ));
         break;
     }
