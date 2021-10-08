@@ -183,7 +183,7 @@ class MapList extends StatefulWidget {
 }
 
 class _MapListState extends State<MapList> {
-  Completer<GoogleMapController> _controller = Completer();
+  final Completer<GoogleMapController> _controller = Completer();
 
   //GoogleMapController controller;
 
