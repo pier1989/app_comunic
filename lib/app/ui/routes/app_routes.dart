@@ -1,3 +1,4 @@
+import 'package:app_comunic/app/ui/pages/dashboard/dashboard.dart';
 import 'package:app_comunic/app/ui/pages/gestionar_ubicacion/add_geolocalizacion.dart';
 import 'package:app_comunic/app/ui/pages/gestionar_ubicacion/list_geolocalizacion.dart';
 import 'package:app_comunic/app/ui/pages/home/home_pages.dart';
@@ -24,4 +25,5 @@ Map<String, Widget Function(BuildContext)> get appRoutes => {
       Routes.MAPLIST: (_) => SearchUi(),
       Routes.NAVIGATION: (_) => NavigationDrawerWidget(),
       Routes.RESET_PASSWORD: (_) => const ResetPasswordPage(),
+      Routes.DASHBOARD: (_) => FaultDashboard()
     };

@@ -31,6 +31,7 @@ dependencies:
   firebase_auth: ^3.0.2
   flutter_meedu: ^4.2.0
   flutter_lints: ^1.0.4
+  fl_chart: ^0.40.2
   freezed: ^0.14.2
   shared_preferences: ^2.0.7
   google_fonts: ^2.1.0
