@@ -1,4 +1,5 @@
 import 'package:app_comunic/app/services/gmaps/gmap_view.dart';
+import 'package:app_comunic/app/ui/pages/dashboard/dashboard.dart';
 import 'package:app_comunic/app/ui/pages/gestionar_ubicacion/add_geolocalizacion.dart';
 import 'package:app_comunic/app/ui/pages/gestionar_ubicacion/loc/loc.dart';
 import 'package:app_comunic/app/ui/pages/home/tabs/profile/profile_tabs.dart';
@@ -69,16 +70,22 @@ class NavigationDrawerWidget extends StatelessWidget {
                     const SizedBox(height: 24),
                     Divider(color: Colors.white70),
                     const SizedBox(height: 24),
+                    buildMenuItem(
+                      text: 'Dashboard',
+                      icon: Icons.location_city,
+                      onClicked: () => selectedItem(context, 3),
+                    ),
                     const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'Localizar Terminal',
                       icon: Icons.location_city,
-                      onClicked: () => selectedItem(context, 3),
+                      onClicked: () => selectedItem(context, 4),
                     ),
+                    const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'Consolidado de Averias',
                       icon: Icons.report_problem,
-                      onClicked: () => selectedItem(context, 4),
+                      onClicked: () => selectedItem(context, 5),
                     ),
                     const SizedBox(height: 24),
                     Divider(color: Colors.white70),
@@ -86,7 +93,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                     buildMenuItem(
                       text: 'Logout',
                       icon: Icons.notifications_outlined,
-                      onClicked: () => selectedItem(context, 5),
+                      onClicked: () => selectedItem(context, 6),
                     ),
                   ],
                 ),
@@ -180,7 +187,7 @@ class NavigationDrawerWidget extends StatelessWidget {
   }
 
   void selectedItem(BuildContext context, int index) {
-    Navigator.of(context).pop();
+    //Navigator.of(context).pop();
 
     switch (index) {
       case 0:
@@ -200,16 +207,21 @@ class NavigationDrawerWidget extends StatelessWidget {
         break;
       case 3:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => FireMap(),
-          // MyApplist(),
+          builder: (context) => FaultDashboard(),
         ));
         break;
       case 4:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => MapLocation(),
+          builder: (context) => FireMap(),
+          // MyApplist(),
         ));
         break;
       case 5:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => MapLocation(),
+        ));
+        break;
+      case 6:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => const MapView(),
         ));

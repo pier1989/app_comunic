@@ -10,4 +10,5 @@ abstract class Routes {
   static const RESET_PASSWORD = '/reset-password';
   static const MAPLIST = '/list/list_averia';
   static const INSERTEMPL = '/list/list_averia';
+  static const DASHBOARD = '/dashboard';
 }
